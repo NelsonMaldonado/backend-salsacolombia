@@ -22,9 +22,9 @@ server.use(cors())
 
 server.use("/api/catalog", CatalogRouter)
 
-// server.get("/api/users", async (req, res) => {
-//   res.json(await getAllUsers())
-// })
+server.get("/", async (req, res) => {
+  res.send("<h2>SalsaColombia API</h2>")
+})
 
 // server.post("/api/users", async (req, res) => {
 //   res.status(201).json(await insertUser(req.body))

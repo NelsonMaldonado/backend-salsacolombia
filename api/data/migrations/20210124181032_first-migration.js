@@ -3,9 +3,6 @@ exports.up = async (knex) => {
     steps.increments("id")
     steps.string("stepname", 200).notNullable()
     steps.string("website", 200).notNullable()
-    steps.string("picture", 200).notNullable()
-    steps.string("videos", 200).notNullable()
-    steps.timestamps(false, true)
   })
 }
 

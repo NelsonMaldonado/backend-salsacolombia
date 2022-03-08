@@ -28,11 +28,14 @@ router.get("/:id", async (req, res, next) => {
 //     res.json(await getAllUsers())
 //   })
 
-router.post("/register", (req, res) => {
-  res.send("user registered")
+router.post("/", async (req, res, next) => {
+  console.log("working post")
+  try {
+    const newStep = await Step.create(req.body)
+    res.status(201).json(newStep)
+  } catch (err) {
+    next(err)
+  }
 })
 
-//   server.post("/api/users", async (req, res) => {
-//     res.status(201).json(await insertUser(req.body))
-//   })
 module.exports = router

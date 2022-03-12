@@ -13,6 +13,7 @@ const getById = (id) => {
 const create = async (step) => {
   // insert into accounts (name, budget) values ('foo',1000)
   const [id] = await db("steps").insert(step)
+  console.log(id)
   return getById(id)
 }
 

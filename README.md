@@ -1,3 +1,6 @@
+Make a database that takes in an URL and it adds it to the Steps Component for the corresponding student that logged in.
+
+
 # Build Week Scaffolding
 
 First READ these instructions to get an overview of what's involved in scaffolding an Express + PostgreSQL app that deploys to Heroku.
